@@ -89,28 +89,26 @@ read option
 
 	case $option in
 	1)numFiles=`numFiles`
-		echo -e "Numero de archivos: $numFiles\n"
+		echo -e "Numero de archivos en el directorio: $numFiles\n"
 		;;
 	2)numSub=`numSub`
 		echo -e "Numero de subdirectorios: $numSub\n"
 		;;
 	3)max=`max`
-		echo -e "El fichero mas grande es: $max\n"
+		echo -e "El fichero mas grande del directorio es: $max\n"
 		;;
 	4)min=`min`
-		echo -e "El fichero mas pequeño es: $min\n"
+		echo -e "El fichero mas pequeño del directorio es: $min\n"
 		;;
 	5)diskUsed=`diskUsed`
 		echo -e "Espacio total usado: $diskUsed\n"
 		;;
 	6)numFichEjec=`numFichEjec`
-		echo -e "ficheros con permso de lectura $numFichEjec\n"
+		echo -e "ficheros con permso de lectura en el directorio $numFichEjec\n"
 		;;
 	7)numFichWrite=`numFichWrite`
-		echo -e "ficheros con permso de escritura $numFichWrite\n"
+		echo -e "ficheros con permso de escritura en el directorio $numFichWrite\n"
 		;;
-	8);;
-	9);;
 	10)break;;
 	*) echo Opcion no valida;;
 	esac
