@@ -19,6 +19,7 @@ function numSub(){
 #Visualizar el fichero de mayor tamano
 function max(){
 	du -sm * | sort -nr | head -1 | cut -f2
+	#ls -al|grep^- | awk {print$5}' | sort -n | head -1
 }
 
 #Visualizar el fichero mas pequeno
@@ -33,6 +34,7 @@ function diskUsed(){
 #Numero de ficheros con permiso de lectura para el usuario que ejecuta
 function numFichEjec(){
 	ls -l | grep '^-r' |wc -l
+	#ls -al | grep '^-r' |wc -l
 }
 function numFichWrite(){
 	num1 = ls -l | grep '^-rw' |wc -l
@@ -40,9 +42,12 @@ function numFichWrite(){
 
  	num1 = $num1 + $num2
  	echo "$num1"
+ 	#ls -al | grep '^-.w' |wc -l
+
 
 }
-#ls -l | cut -f1| grep $x |wc -l
+ 	#ls -al | grep '^-..x' |wc -l
+ 	#ls -al | grep '^-..x..x..x' |wc -l
 
 
 #PRECONDICIONES#
